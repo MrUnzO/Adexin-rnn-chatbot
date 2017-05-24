@@ -99,3 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+.idea/adexin_rnn_chatbot.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/

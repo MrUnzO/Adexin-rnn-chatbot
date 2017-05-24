@@ -4,7 +4,6 @@ Model to predict the next sentence given an input sequence
 """
 
 import tensorflow as tf
-
 from chatbot.textdata import Batch
 
 
@@ -29,14 +28,12 @@ class ProjectionOp:
                 'weights',
                 shape,
                 # initializer=tf.truncated_normal_initializer()  # TODO: Tune value (fct of input size: 1/sqrt(input_dim))
-                dtype=dtype
-            )
+                dtype=dtype)
             self.b = tf.get_variable(
                 'bias',
                 shape[0],
                 initializer=tf.constant_initializer(),
-                dtype=dtype
-            )
+                dtype=dtype)
             self.W = tf.transpose(self.W_t)
 
     def getWeights(self):
