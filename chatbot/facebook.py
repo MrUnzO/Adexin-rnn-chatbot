@@ -1,13 +1,12 @@
 from flask import Flask, request
-import requests
 
 app = Flask(__name__)
 
 
-@app.route("/", methods="")
-def handle():
-    return "ok"
+@app.route('/', methods=['GET'])
+def handle_verification():
+    return request.args['hub.challenge']
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
