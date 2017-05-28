@@ -39,7 +39,7 @@ class Chatbotmanager:
 
         self.reply(sender, prediction)
 
-        return "ok"
+        return "okk"
 
 
 if __name__ == '__main__':
